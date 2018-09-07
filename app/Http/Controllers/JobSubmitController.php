@@ -96,8 +96,8 @@ class JobSubmitController extends Controller
         }
 
         $return_data = [];
-        if($nutshell_status === true) {
-            Mail::to('ethan199130@gmail.com')->send(new SendMail($data));
+        if($nutshell_status === false) {
+            Mail::to('jtrika@gmail.com')->send(new SendMail($data));
             $return_data['success'] = true;
         }
         else {
